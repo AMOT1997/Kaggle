@@ -23,7 +23,7 @@ train_df.drop('engine', axis=1, inplace=True)
 test_df.drop('engine', axis=1, inplace=True)
 
 # OneHot encode categorical columns
-categorical_columns = ['brand', 'model', 'fuel_type', 'transmission', 'ext_col', 'int_col', 'accident', 'clean_title']
+categorical_columns = ['brand', 'fuel_type', 'transmission', 'accident', 'clean_title']
 encoder = OneHotEncoder(sparse=False, drop='first', handle_unknown='ignore')
 
 # Combine, encode, then split train and test data to ensure consistent feature space
